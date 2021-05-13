@@ -1,6 +1,6 @@
 # sy/photoswipe
 
-Photoswipe gallery component
+Photoswipe gallery web component using [PhotoSwipe v4](https://github.com/dimsemenov/photoswipe)
 
 ## Installation
 
@@ -12,7 +12,7 @@ $ composer require sy/photoswipe
 
 On the php side, add the component:
 ```php
-$this->setComponent('PHOTOSWIPE', new \Sy\Component\Web\Photoswipe());
+$this->setComponent('PHOTOSWIPE', new \Sy\Component\Web\PhotoSwipe());
 ```
 
 On the template file, don't forget to add a slot {PHOTOSWIPE}
@@ -27,3 +27,5 @@ On the html side, put images on a container with the class "photoswipe-gallery":
 	<img src="https://picsum.photos/id/5/400/300" alt="Image 5" />
 </div>
 ```
+
+You can try to [run an example](https://syframework.alwaysdata.net/photoswipe) of how to use this component.
