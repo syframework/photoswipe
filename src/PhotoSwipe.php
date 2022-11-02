@@ -3,9 +3,11 @@ namespace Sy\Component\Web;
 
 class PhotoSwipe extends \Sy\Component\WebComponent {
 
-	public function __toString() {
-		$this->init();
-		return parent::__toString();
+	public function __construct() {
+		parent::__construct();
+		$this->mount(function () {
+			$this->init();
+		});
 	}
 
 	private function init() {
