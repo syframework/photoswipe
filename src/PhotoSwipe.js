@@ -4,7 +4,7 @@
 		var i = 0;
 
 		var parseThumbnailElements = function (el) {
-			var thumbElements = el.querySelectorAll('img:not(.emojione)'),
+			var thumbElements = el.querySelectorAll('a img'),
 				numNodes = thumbElements.length,
 				items = [],
 				item;
@@ -48,7 +48,7 @@
 			e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
 			var clickedGallery = photoswipeGallery,
-				childNodes = clickedGallery.querySelectorAll('img:not(.emojione)'),
+				childNodes = clickedGallery.querySelectorAll('a img'),
 				numChildNodes = childNodes.length,
 				nodeIndex = 0,
 				index;
@@ -82,7 +82,7 @@
 			options = {
 				galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 				getThumbBoundsFn: function (index) {
-					var thumbnail = galleryElement.querySelectorAll('img:not(.emojione)')[index],
+					var thumbnail = galleryElement.querySelectorAll('a img')[index],
 						pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
 						rect = thumbnail.getBoundingClientRect();
 
